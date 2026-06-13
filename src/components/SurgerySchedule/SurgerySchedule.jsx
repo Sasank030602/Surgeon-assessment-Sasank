@@ -22,8 +22,7 @@ function SurgerySchedule() {
         </button>
       </div>
 
-      <div className="table-container">
-        <table className="surgery-table">
+        <table className="surgery-table border">
           <thead>
             <tr>
               <th>Date</th>
@@ -98,7 +97,6 @@ function SurgerySchedule() {
             </tr>
           </tbody>
         </table>
-      </div>
 
       
       <SurgeryDetailsModal 

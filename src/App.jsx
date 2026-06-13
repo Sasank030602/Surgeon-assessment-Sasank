@@ -1,41 +1,66 @@
-import { useState } from 'react'
-import './App.css'
-import SideBar from "./components/SideBar/SideBar"
-import TopBar from "./components/TopBar/TopBar"
-import Dashboard from "./components/Dashboard/Dashboard"
-import SurgerySchedule from "./components/SurgerySchedule/SurgerySchedule"
-import ORCalendar from "./components/ORCalendar/ORCalendar"
+import { useState } from "react";
+import "./App.css";
+
+import SideBar from "./components/SideBar/SideBar";
+import TopBar from "./components/TopBar/TopBar";
+
+import Dashboard from "./components/Dashboard/Dashboard";
+import SurgerySchedule from "./components/SurgerySchedule/SurgerySchedule";
+import ORCalendar from "./components/ORCalendar/ORCalendar";
 
 function App() {
-  const [activeTab, setActiveTab] = useState('Dashboard');
+  const [activePage, setActivePage] = useState(0);
 
-  
   const renderContent = () => {
-    switch (activeTab) {
-      case 'Dashboard':
+    // This switch now accepts BOTH numbers and string names!
+    switch (activePage) {
+      case 0:
+      case "Dashboard":
         return <Dashboard />;
-      case 'Surgery Schedule':
+
+      case 1:
+      case "Surgery Schedule":
         return <SurgerySchedule />;
-      case 'OR Calendar':
+
+      case 2:
+      case "OR Calendar":
         return <ORCalendar />;
-      case 'Surgical Patients':
+
+      case 3:
+      case "Surgical Patients":
         return <Dashboard />;
+
       default:
-        return <div><h2>Select an option</h2></div>;
+        // This will print the value to the screen if it fails, helping us debug!
+        return <h2>Select a page... (Value received: {activePage})</h2>;
     }
   };
 
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
-      <SideBar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: "flex", height: "100vh", overflow: "hidden" }}>
+
+      <SideBar
+        activePage={activePage}
+        onPageChange={setActivePage}
+      />
+
+      <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
         <TopBar />
-        <div style={{ padding: '20px', flex: 1, backgroundColor: '#f4f6f8', overflowY: 'auto' }}>
+
+        <div
+          style={{
+            padding: "20px",
+            flex: 1,
+            backgroundColor: "#f4f6f8",
+            overflowY: "auto",
+          }}
+        >
           {renderContent()}
         </div>
       </div>
+
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
