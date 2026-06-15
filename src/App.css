@@ -199,7 +199,7 @@
 .dashboard-container {
   font-family: Arial, Helvetica, sans-serif;
   color: #1e293b;
-  max-width: 1200px;
+  max-width: 100px;
 }
 
 .dashboard-title {
@@ -382,7 +382,7 @@
 .or-calendar-container {
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #1e293b;
-  max-width: 1200px;
+  max-width: 1300px;
 }
 
 .calendar-title {
@@ -406,7 +406,7 @@
 
 .calendar-main-card,
 .calendar-side-card {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 1.5rem;
@@ -419,7 +419,6 @@
   margin-bottom: 1.5rem;
 }
 
-
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -430,15 +429,19 @@
   text-align: center;
   font-size: 0.85rem;
   font-weight: 600;
+  background: #F1F5F9;
   color: #475569;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  border-radius: 4px;
 }
 
 .calendar-date-cell {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  height: 95px;
+  width: 120px;
+  height: 120px;
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -948,6 +951,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  border-radius: 16px;
 }
 
 .surgery-table th {

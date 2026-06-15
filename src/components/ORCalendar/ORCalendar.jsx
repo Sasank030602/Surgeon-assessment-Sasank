@@ -17,9 +17,9 @@ function ORCalendar() {
         <div className="calendar-subtitle">Operating room availability and scheduling</div>
       </div>
 
-      <div className="calendar-content-grid">
+      <div className="calendar-content-grid col-md-12">
         
-        <div className="calendar-main-card">
+        <div className="calendar-main-card bg-white">
           <h3 className="calendar-card-title">OR Availability - January 2026</h3>
           
           <div className="calendar-grid">
