@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "../../App.css";
 import { FiCalendar } from 'react-icons/fi';
 import SurgeryDetailsModal from './SurgeryDetailsModal';

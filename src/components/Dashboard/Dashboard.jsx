@@ -1,4 +1,3 @@
-import React from "react";
 import "../../App.css";
 import { FiCalendar, FiScissors, FiCheckCircle, FiUsers } from "react-icons/fi";
 

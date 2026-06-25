@@ -1,6 +1,4 @@
-import React from "react";
 import "../../App.css";
-
 import { MdOutlineDashboard } from "react-icons/md";
 import { RxPeople } from "react-icons/rx";
 import { LuScissors } from "react-icons/lu";
@@ -35,7 +33,7 @@ const Sidebar = ({ activePage, onPageChange }) => {
       <div className="sidebar-nav mt-3 flex-grow-1">
         <ul className="nav flex-column">
 
-          {navLinks.map((link, idx) => (
+          {navLinks.map((link) => (
             <li key={link.name} className="nav-item my-1">
 
               <button

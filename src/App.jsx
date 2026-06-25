@@ -1,9 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-
 import SideBar from "./components/SideBar/SideBar";
 import TopBar from "./components/TopBar/TopBar";
-
 import Dashboard from "./components/Dashboard/Dashboard";
 import SurgerySchedule from "./components/SurgerySchedule/SurgerySchedule";
 import ORCalendar from "./components/ORCalendar/ORCalendar";
@@ -12,7 +10,6 @@ function App() {
   const [activePage, setActivePage] = useState(0);
 
   const renderContent = () => {
-    // This switch now accepts BOTH numbers and string names!
     switch (activePage) {
       case 0:
       case "Dashboard":
@@ -31,7 +28,6 @@ function App() {
         return <Dashboard />;
 
       default:
-        // This will print the value to the screen if it fails, helping us debug!
         return <h2>Select a page... (Value received: {activePage})</h2>;
     }
   };

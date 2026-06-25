@@ -1,4 +1,3 @@
-import React from 'react';
 import { LuX, LuMaximize, LuEye, LuFileText } from 'react-icons/lu';
 import "../../App.css";
 

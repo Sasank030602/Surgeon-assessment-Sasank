@@ -1,4 +1,3 @@
-import React from 'react';
 import { LuX } from 'react-icons/lu';
 import { FiCheckCircle } from 'react-icons/fi';
 import "../../App.css";
